@@ -14,6 +14,11 @@ window.addEventListener('offline', (event) => {
   console.log('user is not connected to a network');
 });
 
+window.addEventListener('fullscreenchange', (event) => {
+  alert('you are now in fullscreen mode. Pres ESC to exit.');
+  console.log('user is in fullscreen mode');
+});
+
 //logo
 const logo = document.querySelector('.logo-heading');
 console.log(logo);
