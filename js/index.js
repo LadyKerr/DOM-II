@@ -17,3 +17,15 @@ logo.addEventListener('click', (event) => {
     });
   });
 
+  //nav links
+  const navLink = document.querySelectorAll('.nav-link');
+  console.log(navLink);
+  navLink.forEach((link) => {
+    link.addEventListener('mouseover', (event) => {
+    link.style.color = 'yellow';
+    });
+    link.addEventListener('mouseout', (event) => {
+      link.style.color = 'black';
+    });
+  });
+
