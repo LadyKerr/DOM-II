@@ -3,6 +3,7 @@
 //window event listeners
 window.addEventListener('load', (event) => {
   console.log('page is fully loaded.');
+  alert('Welcome to Fun Bus Travel Agency!');
 });
 
 window.addEventListener('online', (event) => {
@@ -32,9 +33,9 @@ logo.addEventListener('mouseout', (event) => {
     console.log(btn);
   btn.forEach((button) => {
     button.addEventListener('click', (event) => {
-    button.style.backgroundColor = 'yellow';
-    button.style.color = 'black';
-    alert('Thank you for choosing FunBus!');
+      button.style.backgroundColor = 'yellow';
+      button.style.color = 'black';
+      alert('Thank you for choosing FunBus!');
     });
   });
 
@@ -43,11 +44,12 @@ logo.addEventListener('mouseout', (event) => {
     console.log(navLink);
   navLink.forEach((link) => {
     link.addEventListener('mouseover', (event) => {
-    link.style.color = 'red';
+      link.style.color = 'red';
     });
     link.addEventListener('mouseout', (event) => {
       link.style.color = 'black';
     });
+    link.preventDefault;
   });
  
   //main content images
@@ -55,11 +57,20 @@ logo.addEventListener('mouseout', (event) => {
     console.log(img);
   img.forEach((image) => {
     image.addEventListener('mouseenter', (event) => {
-    image.style.border = '2px solid black';
+      image.style.border = '2px solid black';
     });
     image.addEventListener('mouseleave', (event) => {
-    image.style.border = '0';
+      image.style.border = '0';
     });
   });
 
+  // lower 3 paragraphs
+  const dest = document.querySelectorAll('.destination');
+    console.log(dest);
+    dest.forEach((destination) => {
+      destination.addEventListener('pointerlockchange',(event) => {
+        console.log('pointer lock changes');
+      });
+    });
+  
   
