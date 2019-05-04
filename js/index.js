@@ -1,9 +1,30 @@
 // Your code goes here
+
+//window event listeners
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded.');
+});
+
+window.addEventListener('online', (event) => {
+  console.log('user is connected to a network');
+});
+
+window.addEventListener('offline', (event) => {
+  console.log('user is not connected to a network');
+});
+
+//logo
 const logo = document.querySelector('.logo-heading');
 console.log(logo);
 logo.addEventListener('click', (event) => {
   logo.style.color = 'red';
   logo.style.fontSize = '60px';
+  });
+logo.addEventListener('mouseover', (event) => {
+  logo.style.color = 'red';
+  });
+logo.addEventListener('mouseout', (event) => {
+  logo.style.color = 'black';
   });
 
   //On click buttons change
@@ -19,13 +40,26 @@ logo.addEventListener('click', (event) => {
 
   //nav links
   const navLink = document.querySelectorAll('.nav-link');
-  console.log(navLink);
+    console.log(navLink);
   navLink.forEach((link) => {
     link.addEventListener('mouseover', (event) => {
-    link.style.color = 'yellow';
+    link.style.color = 'red';
     });
     link.addEventListener('mouseout', (event) => {
       link.style.color = 'black';
     });
   });
+ 
+  //main content images
+  const img = document.querySelectorAll('.img-content');
+    console.log(img);
+  img.forEach((image) => {
+    image.addEventListener('mouseenter', (event) => {
+    image.style.border = '2px solid black';
+    });
+    image.addEventListener('mouseleave', (event) => {
+    image.style.border = '0';
+    });
+  });
 
+  
